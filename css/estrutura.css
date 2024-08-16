@@ -1,0 +1,270 @@
+/* Estilo padrão para desktops */
+.estrutura-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background: #211E7E;
+    justify-content: center;
+    align-items: center;
+}
+
+.espaco-image {
+    width: 100%;
+}
+
+.estrutura-session {
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.estrutura-session h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.estrutura-img {
+    width: 100%;
+    max-width: 100%; /* Garante que a imagem não exceda a largura do container */
+}
+
+.div-sobre {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 65vh;
+}
+
+.div-estrutura-image {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    border-radius: 20px;
+    overflow: hidden; /* Garante que a imagem não exceda o container */
+}
+
+.div-estrutura-image img {
+    width: 70%;
+    border-radius: 20px;
+    overflow: hidden; /* Garante que a imagem não exceda o container */
+}
+
+.estrutura-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin-bottom: .5%;
+}
+
+.estrutura-title h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.div-estrutura-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto; /* Ajusta a altura automaticamente para o conteúdo */
+}
+
+.estrutura-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding: 15px;
+    height: auto; /* Ajusta a altura automaticamente para o conteúdo */
+    max-height: 350px; /* Limita a altura máxima da caixa */
+    border-radius: 30px;
+    background: #2E71B9;
+    overflow: hidden; /* Garante que o conteúdo não exceda a caixa */
+}
+
+.estrutura-text {
+    width: 100%;
+    padding: 10px; /* Adiciona padding para melhor visualização do texto */
+}
+
+.estrutura-text h2 {
+    color: #FFF;
+    text-align: justify;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4; /* Aumenta o espaçamento entre linhas para melhorar a legibilidade */
+}
+
+/* Estilos para o carousel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Garante que as imagens fora do contêiner não apareçam */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transição suave ao trocar de imagem */
+}
+
+.carousel img {
+    width: 100%;
+    flex-shrink: 0; /* Garante que as imagens não encolham */
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Media queries para ajustar o layout em diferentes tamanhos de tela */
+@media (max-width: 1024px) {
+    .estrutura-container {
+        flex-direction: column;
+        align-items: center;
+    }    
+    .div-sobre {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .estrutura-session h1 {
+        font-size: 30px ;
+    }
+
+    .div-estrutura-image {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .div-estrutura-image img {
+        width: 40%;
+        border-radius: 20px;
+        overflow: hidden; /* Garante que a imagem não exceda o container */
+    }
+
+    .estrutura-title {
+        width: 100%;
+    }
+
+    .estrutura-title h1 {
+        font-size: 20px;
+    }
+
+    .estrutura-box {
+        width: 100%;
+        max-height: none; /* Remove a altura máxima para ajustar conforme necessário */
+    }
+
+    .estrutura-text h2 {
+        font-size: 14px;
+        padding: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .div-sobre {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .estrutura-session h1 {
+        font-size: 24px ;
+    }
+
+    .div-estrutura-image {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .div-estrutura-image img {
+        width: 50%;
+        margin-bottom: 5px;
+    }
+
+    .estrutura-title h1 {
+        font-size: 36px;
+    }
+
+    .estrutura-box {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .estrutura-text h2 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .estrutura-container {
+        padding: 0;
+    }
+
+    .div-sobre {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .estrutura-session h1 {
+        font-size: 16px ;
+    }
+
+    .div-estrutura-image {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .div-estrutura-image img {
+        width: 50%;
+        margin-bottom: 5px;
+    }
+
+    .estrutura-title h1 {
+        font-size: 28px;
+    }
+
+    .estrutura-box {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px; /* Remove a altura máxima para ajustar conforme necessário */
+    }
+
+    .estrutura-text h2 {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,168 @@
+/* Estilo padrão para desktops */
+.div-image {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    background-image: url('/images/piscina.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInSlideIn 1s ease-out forwards; /* Animação de chegada */
+}
+
+.div-image-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;   
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInSlideIn 1s ease-out 1s forwards; /* Animação com atraso */
+}
+
+.div-image-text strong {
+    font-size: 60px;
+}
+
+.text-natacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 7px;  
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInSlideIn 1s ease-out 2s forwards; /* Animação com atraso */
+}
+
+.div-text-natacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 670px;
+    height: 51px;  
+    border-radius: 10px;
+    background: #211E7E;
+    text-align: center;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInSlideIn 1s ease-out 3s forwards; /* Animação com atraso */
+}
+
+.text-cabobranco {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInSlideIn 1s ease-out 4s forwards; /* Animação com atraso */
+}
+
+.text-cabobranco a {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    justify-content: center;   
+}
+
+.text-cabobranco h2 {
+    color: #FFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    margin-left: 10px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.text-natacao h2 {
+    color: #FBBC05;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.div-image-text h2 {
+    color: #FFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.final-image {
+    width: 100%;
+    height: 50px;
+    background: #211E7E;
+}
+
+/* Media Query para tablets (dispositivos com largura entre 600px e 1024px) */
+@media (max-width: 1024px) {
+    .div-image {
+        height: 60vh;
+    }
+
+    .div-image-text strong {
+        font-size: 50px;
+    }
+
+    .text-natacao {
+        height: 10px;
+    }
+
+    .div-text-natacao {
+        width: 60%;
+        height: 45px;
+    }
+
+    .text-cabobranco h2 {
+        font-size: 22px;
+    }
+
+    .text-natacao h2 {
+        font-size: 20px;
+    }
+
+    .div-image-text h2 {
+        font-size: 38px;
+    }
+}
+
+/* Media Query para celulares (dispositivos com largura até 600px) */
+@media (max-width: 600px) {
+    .div-image {
+        height: 50vh;
+    }
+
+    .div-image-text strong {
+        font-size: 30px;
+    }
+
+    .text-natacao {
+        height: 12px;
+    }
+
+    .div-text-natacao {
+        width: 70%;
+        height: 20px;
+    }
+
+    .text-cabobranco h2 {
+        font-size: 18px;
+    }
+
+    .text-natacao h2 {
+        font-size: 10px;
+    }
+
+    .div-image-text h2 {
+        font-size: 20px;
+    }
+}

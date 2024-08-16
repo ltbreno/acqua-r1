@@ -1,0 +1,112 @@
+/* Estilos gerais */
+
+.div-atletas-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.atletas-box {
+    display: inline-block;
+    width: 68%; 
+    height: 20px;
+    background-color: #211E7E;
+}
+
+.atletas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 800px;
+}
+
+.atletas-img {
+    margin-right: 80px;
+}
+
+.atletas-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 552px;
+}
+
+.atletas-text h2 {
+    color: #000;
+    text-align: justify;
+    font-family: Montserrat, sans-serif;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Estilos para tablets */
+
+@media (max-width: 1024px) {
+    .atletas {
+        flex-direction: column;
+        height: auto; /* Ajusta a altura conforme necessário */
+    }
+
+    .atletas-img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .atletas-text {
+        width: 90%;
+        height: auto; /* Ajusta a altura conforme necessário */
+    }
+
+    .atletas-text h2 {
+        font-size: 20px;
+    }
+}
+
+/* Estilos para dispositivos móveis */
+
+@media (max-width: 768px) {
+    .div-atletas-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .atletas-box {
+        width: 100%;
+        height: 15px;
+    }
+
+    .atletas {
+        flex-direction: column;
+        height: auto; /* Ajusta a altura conforme necessário */
+    }
+
+    .atletas-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .atletas-img img {
+        width: 250px;
+    }
+
+    .atletas-text {
+        width: 90%;
+        height: auto; /* Ajusta a altura conforme necessário */
+    }
+
+    .atletas-text h2 {
+        font-size: 12px;
+        text-align: left; /* Ajusta o alinhamento do texto para dispositivos móveis */
+    }
+}

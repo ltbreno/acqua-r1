@@ -1,0 +1,70 @@
+/* Estilo padrão para desktops */
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 85px;
+    background: #211E7E;
+    align-items: center;
+    /* Animação de chegada */
+    animation: fadeInSlideIn 1s ease-out; /* Animação dura 1 segundo e usa um easing para suavizar o efeito */
+}
+
+/* Animação de chegada */
+@keyframes fadeInSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Começa um pouco acima e invisível */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Termina na posição original e totalmente visível */
+    }
+}
+
+.image-header {
+    width: 30%;
+    margin-left: 60px;
+}
+
+.links-div {
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.links-div a {
+    color: #FFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+/* Media Query para tablets (dispositivos com largura entre 600px e 1024px) */
+@media (max-width: 1024px) {
+    .image-header {
+        width: 30%;
+        margin-left: 30px;
+    }
+
+    .links-div {
+        width: 60%;
+        letter-spacing: 0.5px; 
+    }
+
+    .links-div a {
+        font-size: 10px;
+    }
+}
+
+/* Media Query para celulares (dispositivos com largura até 600px) */
+@media (max-width: 600px) {
+    /* Remove o header para celulares */
+    header {
+        display: none;
+    }
+}

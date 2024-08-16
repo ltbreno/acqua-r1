@@ -1,0 +1,127 @@
+/* Estilo padrão para desktops */
+.modalidades-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90px;
+    margin-top: 15px;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInSlideIn 1s ease-out forwards; /* Animação de chegada */
+}
+
+.modalidades-title h2 {
+    color: #211E7E;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.grid-containers {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(4, auto); 
+    gap: 5px; 
+    padding: 10px; 
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInSlideIn 1s ease-out 0.5s forwards; /* Animação com atraso */
+}
+
+.grid-itens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; 
+    overflow: hidden;
+    background-color: #fff; 
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInSlideIn 1s ease-out 1s forwards; /* Animação com atraso */
+}
+
+.grid-text {
+    width: 320px;
+    height: 180px;
+}
+
+.grid-itens h2 {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Animação de chegada */
+@keyframes fadeInSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Começa um pouco acima e invisível */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Termina na posição original e totalmente visível */
+    }
+}
+
+/* Media Query para tablets (dispositivos com largura entre 600px e 1024px) */
+@media (max-width: 1024px) {
+    .modalidades-title h2 {
+        font-size: 50px;
+    }
+
+    .grid-containers {
+        grid-template-columns: repeat(1, 1fr); 
+        grid-template-rows: repeat(3, auto); 
+        gap: 10px; 
+    }
+
+    .grid-text {
+        width: 280px;
+        height: 160px;
+    }
+
+    .grid-itens h2 {
+        font-size: 16px;
+    }
+}
+
+/* Media Query para celulares (dispositivos com largura até 600px) */
+@media (max-width: 600px) {
+    .modalidades-title {
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .modalidades-title h2 {
+        font-size: 20px;
+    }
+
+    .grid-containers {
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(auto-fill, minmax(180px, 1fr)); 
+        gap: 10px; 
+        padding: 5px; 
+    }
+
+    .grid-itens img {
+        width: 100px;
+    }
+
+    .grid-text {
+        width: 200px;
+        height: auto;
+    }
+
+    .grid-itens h2 {
+        font-size: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
