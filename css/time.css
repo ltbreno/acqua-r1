@@ -190,14 +190,22 @@ h1 {
 
 /* Responsividade para tablets */
 @media (max-width: 1500px) and (min-width: 769px) {
-    .team-container, .team-main, .member-image-large, .member-description-large, .member-image-small, .member-description-small {
+    .team-container,
+    .team-main,
+    .member-image-large,
+    .member-description-large,
+    .carousel-wrapper {
         display: none;
     }
 }    
 
 /* Responsividade para celulares */
 @media (max-width: 768px) {
-    .team-container, .team-main, .member-image-large, .member-description-large, .member-image-small, .member-description-small {
+    .team-container,
+    .team-main,
+    .member-image-large,
+    .member-description-large,
+    .carousel-wrapper {
         display: none;
     }
 }
